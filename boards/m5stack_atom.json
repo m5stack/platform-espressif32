@@ -1,34 +1,34 @@
 {
   "build": {
-    "arduino":{
+    "arduino": {
       "ldscript": "esp32_out.ld"
     },
     "core": "esp32",
-    "extra_flags": "-DARDUINO_M5Stack_Core_ESP32",
+    "extra_flags": [
+      "-DARDUINO_M5STACK_ATOM"
+    ],
     "f_cpu": "240000000L",
     "f_flash": "80000000L",
-    "flash_mode": "qio",
+    "flash_mode": "dio",
     "mcu": "esp32",
-    "variant": "m5stack_core_esp32"
+    "variant": "m5stack_atom"
   },
   "connectivity": [
     "wifi",
-    "bluetooth",
-    "ethernet",
-    "can"
+    "bluetooth"
   ],
   "frameworks": [
     "arduino",
     "espidf"
   ],
-  "name": "M5Stack Core ESP32",
+  "name": "M5Atom",
   "upload": {
     "flash_size": "4MB",
     "maximum_ram_size": 327680,
     "maximum_size": 4194304,
     "require_upload_port": true,
-    "speed": 460800
+    "speed": 1500000
   },
-  "url": "http://www.m5stack.com",
+  "url": "https://docs.m5stack.com/en/products/sku/C008",
   "vendor": "M5Stack"
 }
